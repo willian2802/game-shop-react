@@ -1,0 +1,19 @@
+.rotator {
+    height: 50vh;
+    background-color: black;
+  }
+  
+  .rotator img {
+    background-size: cover;
+  }
+  
+  nav {  
+    background-color: black;
+    display: flexbox;
+  }
+  
+  
+  nav img {
+    height: 3rem;
+    
+  }

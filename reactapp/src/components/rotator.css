@@ -1,0 +1,6 @@
+.carrouseu-space img {
+    min-height: 80vh;
+    min-width: 100vw;
+    max-height: 80vh;
+    max-width: 100vw;
+}

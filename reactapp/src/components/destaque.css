@@ -1,0 +1,32 @@
+.space {
+    background-color: rgb(11, 11, 37);
+    margin: 5rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.title {
+    width: 10rem;
+    background-color: black;
+    margin: 15rem auto 5px auto;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    
+}
+
+.img-space {
+    width: 100%;
+    height: 25rem;
+    margin: auto 20px auto 20px;
+    padding: 0;
+    border: solid rgb(119, 117, 117) 2px;
+}
+
+
+
+.img-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;  
+}
