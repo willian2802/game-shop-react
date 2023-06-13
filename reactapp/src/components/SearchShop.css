@@ -13,8 +13,22 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+ }
+
+
+ .card-Space {
+    padding: 2rem;
   }
-  
+
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card-img-top {
+    object-fit: fill;
+    height: 15rem;
+  }
   
   
 

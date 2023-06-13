@@ -8,7 +8,7 @@ export const inicialState = {
 
 
 const lojaReducer = (state, action) => {
-  console.log(state , action)
+ // console.log(state , action)
     switch (action.type) {
       case "Destaque":
         console.log("funcionou Destaque")
@@ -22,6 +22,12 @@ const lojaReducer = (state, action) => {
           ...state,
           appStage: action.payload,
         }
+        case "twochoose":
+        console.log("funcionou twochoose")
+        return {
+          ...state,
+          appStage: action.payload,
+        };
       default:
         return state;
     }

@@ -3,10 +3,9 @@ import Rotator from './components/rotator'
 import SpaceDestaque from "./components/Destaque"
 import TwoChoose from "./components/twoChoose"
 import SearchShop from "./components/SearchShop"
+import Carrinho from './components/carrinho';
 
-
-
-
+import { CarrinhoProvider } from './components/CarrinhoContext';
 import { useContext } from "react";
 import {SeletorContexto} from "./components/loja"
 
@@ -14,13 +13,32 @@ import {SeletorContexto} from "./components/loja"
 function App() {
 const [inicialState, dispatch] = useContext(SeletorContexto);
 
-// bota o SeletorProvider no main.jsx envolta do app pra ve se resolve
+const handleInicioClick = () => {
+  const action = { type: "twochoose", payload: "twochoose" };
+  dispatch(action);
+};
+
 
   return (
   <>
+
+          
       <Nav />
+
+      <div className="voltar-container aberto">
+            <div className="voltar-icon-container" onClick={handleInicioClick} >
+              <div className="voltar-icon">
+                <i className="fa-solid fa-backward fa-2x" ></i>
+              </div>
+            </div>
+      </div>
+
         {inicialState.appStage === "twochoose" && <TwoChoose />}
-        {inicialState.appStage === "Loja" && <SearchShop />}
+
+        <CarrinhoProvider>
+          {inicialState.appStage === "Loja" && <SearchShop />}
+          <Carrinho />
+        </CarrinhoProvider>
 
         {inicialState.appStage === "Destaque" && (
           <>
@@ -28,8 +46,6 @@ const [inicialState, dispatch] = useContext(SeletorContexto);
             <SpaceDestaque />
           </>
         )}
-
-
 
   </>
   )

@@ -8,17 +8,8 @@ body {
     margin-top: 10%;
     border-radius: 20px;
     padding: 15px;
+    
 }
-
-@media (max-width: 768px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-    .box {
-        height: fit-content;
-    }
-  }
 
 .box-choose {
     width: 100%;
@@ -31,6 +22,24 @@ body {
     height: 100%;
     object-fit: fill; 
 }
+
+
+@media (max-width: 360px) {
+    
+    .container {
+    flex-direction: column;
+
+    }
+  }
+
+@media (max-width: 580px) {
+    
+    .container {
+    margin-top: 100px;
+    width: 100%;
+    }
+  }
+
 
 .icon-layer i {
     opacity: 0.4;

@@ -1,0 +1,95 @@
+/* Carrinho */
+.carrinho-container {
+  position: fixed;
+  top: 95px;
+  right: -300px;
+  /* Escondido inicialmente */
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(47, 37, 37);
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  /* Adicionado para permitir rolagem quando há muitos itens */
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid rgb(53, 53, 120);
+}
+
+.carrinho-container.aberto {
+  right: 0;
+  /* Mostra o carrinho */
+}
+
+.carrinho-icon-container {
+  position: fixed;
+  top: 95px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.carrinho-icon {
+  display: flex;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.carrinho-badge {
+  background-color: #fff;
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.carrinho-lista-container {
+  padding: 20px;
+}
+
+.carrinho-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Adicionado para centralizar verticalmente */
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 2px solid blue;
+  border-radius: 20px solid;
+  background-color: cadetblue;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.carrinho-item span:first-child {
+  font-weight: bold;
+}
+
+.carrinho-item span:last-child {
+  margin-left: 10px;
+  /* Adicionado espaço entre o nome e o preço */
+}
+
+.carrinho-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
